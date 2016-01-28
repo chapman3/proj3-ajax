@@ -6,7 +6,7 @@ Edit to fit development or deployment environment.
 import random 
 
 ### My local development environment
-PORT=5000
+PORT=7316
 DEBUG = True
 
 ### On ix.cs.uoregon.edu

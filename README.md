@@ -7,16 +7,42 @@ That's "controle" with an 'e', because it's French, although "control" is also a
 a rider must obtain proof of passage, and control[e] times are the minimum and maximum times by which the rider must
 arrive at the location.  
 
-The algorithm for calculating controle times is described at http://www.rusa.org/octime_alg.html . The description is ambiguous, but the examples help.  Part of finishing this project is clarifying anything that is not clear about the requirements, and documenting it clearly. 
+The algorithm for calculating controle times is described at http://www.rusa.org/octime_alg.html .
+The description is ambiguous, but the examples help.
+Part of finishing this project is clarifying anything that is not clear about the requirements, and documenting it clearly.
 
-We are essentially replacing the calculator at http://www.rusa.org/octime_acp.html .  We can also use that calculator to clarify requirements.  
+We are essentially replacing the calculator at http://www.rusa.org/octime_acp.html .
+We can also use that calculator to clarify requirements.
 
 ## AJAX and Flask reimplementation
 
-The current RUSA controle time calculator is a Perl script that takes an HTML form and emits a text page. The reimplementation will fill in times as the input fields are filled.  Each time a distance is filled in, the corresponding open and close times should be filled in.   If no begin time has been provided, use 0:00 as the begin time. 
+The current RUSA controle time calculator is a Perl script that takes an HTML form and emits a text page.
+The reimplementation will fill in times as the input fields are filled.
+Each time a distance is filled in, the corresponding open and close times should be filled in.
+If no begin time has been provided, use 0:00 as the begin time.
 
 I will leave much of the design to you.  
 
 ## Testing
 
 A requirement of this project will be designing a systematic test suite. 
+
+
+
+===
+David's Part:
+===
+David Chapman
+
+CIS399 Winter 2016
+
+Assignment 4 - Brevet Calculator
+
+Still to-do:
+    []Test initial
+    []Examine Project Requirements
+        []Examine ACP Controle Algorithm at http://www.rusa.org/octime_alg.html
+        []Replace Calculator at http://www.rusa.org/octime_acp.html
+            []Each time a form is changed, update open and close times
+                []if no start_time: then begin_time = 0:00
+        []Design Systematic Test Suite
