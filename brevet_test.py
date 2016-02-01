@@ -15,7 +15,20 @@ correct = [[0,(0,0),(1,0)],
 def test_calc(dist):
     print(str(brevet_calc.get_times(dist)))
 
+def test_new_time(start_date, start_time, hours, minutes):
+    print(str(brevet_calc.handle_new_time(start_date,start_time,hours,minutes)))
+
 
 if __name__ == "__main__":
+    #test dist calculations
+    print("test 200km")
     test_calc(200)
+    print("correct" + str(correct[2]))
+    print("test 700km")
     test_calc(700)
+    print("correct" + str(correct[7]))
+    #test handle_new_date
+    print("add 6:45 to 18:45 -> 1:30")
+    test_new_time("01/01/2016","18:45",6,45)
+    print("add 24:45 to 0:00 -> 0:45")
+    test_new_time("01/01/2016","00:00",24,45)
