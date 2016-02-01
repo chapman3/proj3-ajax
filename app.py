@@ -95,7 +95,7 @@ def format_arrow_date( date ):
 @app.template_filter( 'fmttime' )
 def format_arrow_time( time ):
     try: 
-        normal = arrow.get( date )
+        normal = arrow.get( time )
         return normal.format("hh:mm")
     except:
         return "(bad time)"
