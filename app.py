@@ -71,7 +71,9 @@ def calc_times():
   km = request.args.get('km', 0, type=int)
   start_time = request.args.get('start_tm', 0, type=str)
   start_date = request.args.get('start_dt', 0, type=str)
+  print(km,start_date,start_time)
   times = brevet_calc.get_times(km)
+
   new_open_close = brevet_calc.handle_new_time(start_date,start_time,times[0],times[1])
   rslt = {"new_open": new_open_close[0], "new_close": new_open_close[1]}
   return jsonify(result=rslt)
