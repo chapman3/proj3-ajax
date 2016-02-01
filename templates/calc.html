@@ -38,8 +38,8 @@
     <option value="600 km">600</option>
     <option value="1000 km">1000</option>
   </select>
-  <input type="text" name="start_date" value="Enter a Start Date">
-  <input type="text" name="start_time" value="Enter a Start Time">
+  <input type="text" name="start_date" value="Enter a Start Date in form 'MM/DD/YYYY'">
+  <input type="text" name="start_time" value="Enter a Start Time in form 'HH:MM'">
 
   <!--
   -- If there are any warnings or other messages from a prior
@@ -111,8 +111,8 @@
                   function(data) {
                      var new_open, new_close = data.result;
                      // alert("Got a response: " +  new_open);
-                     open_target.text(new_open);
-                     close_target.text(new_close);
+                     open_target.replace(new_open);
+                     close_target.replace(new_close);
                   }); // End of the call to getJSON
           });  // End of the function to be called when field changes
               
