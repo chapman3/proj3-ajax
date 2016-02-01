@@ -11,4 +11,4 @@ DEBUG = True
 
 ### On ix.cs.uoregon.edu
 #PORT=random.randint(5000,8000)
-#DEBUG = False # Because it's unsafe to run outside localhost
+DEBUG = False # Because it's unsafe to run outside localhost
