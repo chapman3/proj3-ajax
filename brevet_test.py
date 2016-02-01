@@ -1,5 +1,5 @@
 import brevet_calc
-
+#used actual brevet calculator for correct examples
 correct = [[0,(0,0),(1,0)],
            [100,(2,56),(6,40)],
            [200,(5,53),(13,20)],

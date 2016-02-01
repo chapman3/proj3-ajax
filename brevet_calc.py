@@ -4,6 +4,11 @@ data = [[200,15,34], [400,15,32], [600,15,30], [800,11.428,28], [1000,11.428,28]
 
 
 def convert_time(int):
+    """
+
+    :param int: unadjusted time
+    :return: adjusted time
+    """
     hours = math.floor(int)
     minutes = round((int-hours)*60,0)
     return(hours, minutes)
@@ -81,11 +86,16 @@ def handle_new_time(start_date, start_time, hours, minutes):
 
 
 def get_times(dist):
+    """
+    :param dist: distance in kilometers
+    :return: tuple of open and close times for a gate.
+    """
     count = 0
     open_time = 0
     close_time = 0
     while dist > 200:
         dist -= 200
+        #calculate checkpoint
         open_time += 200/data[count][2]
         close_time += 200/data[count][1]
         count += 1

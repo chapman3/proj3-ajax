@@ -1,37 +1,5 @@
 # proj3-ajax
-Reimplement the RUSA ACP controle time calculator with flask and ajax
 
-## ACP controle times
-
-That's "controle" with an 'e', because it's French, although "control" is also accepted.  Controls are points where 
-a rider must obtain proof of passage, and control[e] times are the minimum and maximum times by which the rider must
-arrive at the location.  
-
-The algorithm for calculating controle times is described at http://www.rusa.org/octime_alg.html .
-The description is ambiguous, but the examples help.
-Part of finishing this project is clarifying anything that is not clear about the requirements, and documenting it clearly.
-
-We are essentially replacing the calculator at http://www.rusa.org/octime_acp.html .
-We can also use that calculator to clarify requirements.
-
-## AJAX and Flask reimplementation
-
-The current RUSA controle time calculator is a Perl script that takes an HTML form and emits a text page.
-The reimplementation will fill in times as the input fields are filled.
-Each time a distance is filled in, the corresponding open and close times should be filled in.
-If no begin time has been provided, use 0:00 as the begin time.
-
-I will leave much of the design to you.  
-
-## Testing
-
-A requirement of this project will be designing a systematic test suite. 
-
-
-
-===
-David's Part:
-===
 David Chapman
 
 CIS399 Winter 2016
@@ -39,10 +7,17 @@ CIS399 Winter 2016
 Assignment 4 - Brevet Calculator
 
 Still to-do:
-    []Test initial
-    []Examine Project Requirements
-        []Examine ACP Controle Algorithm at http://www.rusa.org/octime_alg.html
-        []Replace Calculator at http://www.rusa.org/octime_acp.html
-            []Each time a form is changed, update open and close times
-                []if no start_time: then begin_time = 0:00
-        []Design Systematic Test Suite
+    []Make Functional
+    []Expand HTML past testing file
+
+I have working python modules for operations on brevets, brevet_test.py confirms that.
+However, at the point that I call brevet_calc.handle_new_time I get an internal server error. I am not
+certain what is causing this, though my suspicion is a discrepency in data types.
+I can calculate the distance if the console is checked or the test module run,
+but the html display itself is nothing more than a display for the time being.
+Currently only KM is supported in operation.
+
+github link: https://www.github.com/chapman3/proj4-ajax.git
+ix: home/users/chapman3/public_html/cis399/htbin/proj4-ajax/
+
+
