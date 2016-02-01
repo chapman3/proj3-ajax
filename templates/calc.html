@@ -109,7 +109,8 @@
                   // The function to call with the response
 
                   function(data) {
-                     var new_open, new_close = data.result;
+                     var new_open = data.result.new_open;
+                     var new_close = data.result.new_close;
                      // alert("Got a response: " +  new_open);
                      open_target.text(new_open);
                      close_target.text(new_close);

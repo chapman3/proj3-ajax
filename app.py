@@ -76,6 +76,7 @@ def calc_times():
   print(times)
 
   new_open_close = brevet_calc.handle_new_time(start_date,start_time,times[0],times[1])
+  print(new_open_close)
   rslt = {"new_open": new_open_close[0], "new_close": new_open_close[1]}
   return jsonify(result=rslt)
  
