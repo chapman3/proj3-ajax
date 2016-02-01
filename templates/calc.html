@@ -111,8 +111,8 @@
                   function(data) {
                      var new_open, new_close = data.result;
                      // alert("Got a response: " +  new_open);
-                     open_target.replace(new_open);
-                     close_target.replace(new_close);
+                     open_target.text(new_open);
+                     close_target.text(new_close);
                   }); // End of the call to getJSON
           });  // End of the function to be called when field changes
               
