@@ -102,6 +102,11 @@ if __name__ == "__main__":
     app.secret_key = str(uuid.uuid4())
     app.debug=CONFIG.DEBUG
     app.logger.setLevel(logging.DEBUG)
-    app.run(port=CONFIG.PORT)
+    if app.debug:
+        print("Accessible only on localhost")
+        app.run(port=CONFIG.PORT)  # Accessible only on localhost
+    else:
+        print("Opening for global access on port {}".format(CONFIG.PORT))
+        app.run(port=CONFIG.PORT, host="0.0.0.0")
 
     
