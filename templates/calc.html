@@ -30,7 +30,7 @@
 <div class="container">
 
 <h1>ACP Brevet Closing times</h1>
-<h2>Event Length</h2>
+<h2>Event Length</h2></br>
   <select name ="event_length" id="event_length">
     <option value="200 km">200</option>
     <option value="300 km">300</option>
@@ -38,8 +38,8 @@
     <option value="600 km">600</option>
     <option value="1000 km">1000</option>
   </select>
-  <input type="text" name="start_date" value="Enter a Start Date in form 'MM/DD/YYYY'">
-  <input type="text" name="start_time" value="Enter a Start Time in form 'HH:MM'">
+  <input type="text" name="start_date" value="Enter a Start 'MM/DD/YYYY'">
+  <input type="text" name="start_time" value="Enter a Start 'HH:MM'">
 
   <!--
   -- If there are any warnings or other messages from a prior
@@ -87,7 +87,7 @@
   $(document).ready(function(){
    // Do the following when the page is finished loading
 
-      // When a field named 'miles' is changed ...
+      // When a field named 'distance' is changed ...
       $('input[name="distance"]').change(
           // ... execute this function
           function(){
