@@ -13,6 +13,7 @@ from flask import jsonify # For AJAX transactions
 import json
 import logging
 
+import brevet_calc
 # Date handling 
 import arrow # Replacement for datetime, based on moment.js
 import datetime # But we still need time
@@ -67,8 +68,12 @@ def calc_times():
   Expects one URL-encoded argument, the number of miles. 
   """
   app.logger.debug("Got a JSON request");
-  miles = request.args.get('miles', 0, type=int)
-  return jsonify(result=miles * 2)
+  km = request.args.get('km', 0, type=int)
+  start_time = request.args.get('start_tm', 0, type=int)
+  start_date = request.args.get('start_dt', 0, type=int)
+  times = brevet_calc.get_times(km)
+  new_open_close = brevet_calc.handle_new_time(start_date,start_time,times[0],times[1])
+  return jsonify(result=new_open_close)
  
 #################
 #
